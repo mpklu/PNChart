@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PNBarChart: UIView {
+public class PNBarChart: UIView {
     var bars = NSMutableArray()
     var xLabelWidth: CGFloat!
     var yValueMax: CGFloat!
@@ -62,11 +62,11 @@ class PNBarChart: UIView {
         self.clipsToBounds = true
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func strokeChart() {
+    public func strokeChart() {
         self.viewCleanUpForCollection(arr: self.labels)
         
         if self.showLabel {
@@ -225,7 +225,7 @@ extension PNBarChart {
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.touchPoint(touches, with: event)
         super.touchesBegan(touches, with: event)
     }

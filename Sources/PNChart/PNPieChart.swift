@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PNPieChart: PNGenericChart {
+public class PNPieChart: PNGenericChart {
     lazy var items: [PNPieChartDataItem] = {
         return [PNPieChartDataItem]()
     }()
@@ -69,15 +69,15 @@ class PNPieChart: PNGenericChart {
         self.baseInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         self.baseInit()
     }
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         self.strokeChart()
     }
@@ -304,7 +304,7 @@ extension PNPieChart {
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let touchLocation = touch.location(in: self.contentView)
             self.didTouchAt(touchLocation: touchLocation)
