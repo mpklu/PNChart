@@ -1,6 +1,6 @@
 import XCTest
-@testable import PNChart_SwiftTests
+@testable import PNChartTests
 
 XCTMain([
-    testCase(PNChart_SwiftTests.allTests),
+    testCase(PNChartTests.allTests),
 ])
