@@ -1,4 +1,4 @@
-PNChart-Swift
+PNChart
 =============
 
 For more information, see original repo
