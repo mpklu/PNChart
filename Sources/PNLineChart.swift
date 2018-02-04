@@ -455,7 +455,10 @@ class PNLineChart: UIView{
 extension PNLineChart {
     func heightOfString(text: NSString, width: CGFloat, font: UIFont) -> CGFloat {
         let size = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
-        let rect = text.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
+        let rect = text.boundingRect(with: size,
+                                     options: .usesLineFragmentOrigin,
+                                     attributes: [NSAttributedStringKey.font: font],
+                                     context: nil)
         return rect.size.height
     }
     

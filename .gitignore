@@ -19,3 +19,12 @@ Pods/
 *.pbxuser
 xcuserdata
 *.xccheckout
+
+# Swift Package Manager
+#*.xcworkspacedata
+*.xccheckout
+.build
+*.xcodeproj/
+Package.resolved
+/Packages
+
